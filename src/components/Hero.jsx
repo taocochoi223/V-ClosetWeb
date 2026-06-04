@@ -1,89 +1,202 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Download } from 'lucide-react';
+import { Sparkles, Star, ArrowDown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border text-sm font-medium text-text mb-8"
-          >
-            <Sparkles size={16} className="text-primary" />
-            <span>Trợ lý Thời trang AI & Quản lý tủ đồ thông minh</span>
-          </motion.div>
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-extrabold text-text tracking-tight mb-8 leading-tight"
-          >
-            Tủ Đồ Mơ Ước <br className="hidden md:block" />
-            <span className="text-primary">Trong Tầm Tay Bạn</span>
-          </motion.h1>
-          
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-text/70 mb-10 max-w-2xl mx-auto leading-relaxed"
-          >
-            Số hóa tủ quần áo, phối đồ bằng AI, thử đồ ảo trực tiếp trên cơ thể bạn và kết nối với cộng đồng đam mê thời trang ngay trên V-Closet.
-          </motion.p>
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row justify-center gap-4"
-          >
-            <button className="flex items-center justify-center gap-3 bg-text hover:bg-black text-white px-8 py-4 rounded-2xl font-semibold transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
-              <Download size={24} />
-              <div className="text-left">
-                <div className="text-[10px] uppercase tracking-wider opacity-80">Tải về trên</div>
-                <div className="text-lg leading-tight">App Store</div>
-              </div>
-            </button>
-            <button className="flex items-center justify-center gap-3 bg-primary hover:bg-primaryHover text-white px-8 py-4 rounded-2xl font-semibold transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
-              <Download size={24} />
-              <div className="text-left">
-                <div className="text-[10px] uppercase tracking-wider opacity-80">Tải về trên</div>
-                <div className="text-lg leading-tight">Google Play</div>
-              </div>
-            </button>
-          </motion.div>
-        </div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Animated Gradient Background */}
+      <div className="absolute inset-0 bg-hero-gradient" />
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-amber-200/30 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-rose-200/20 rounded-full blur-3xl animate-float-delay" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-100/20 rounded-full blur-3xl" />
+      </div>
 
-        {/* Mockup Showcase */}
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
+      {/* Floating dots decoration */}
+      {[...Array(6)].map((_, i) => (
+        <div
+          key={i}
+          className="absolute w-2 h-2 bg-amber-400/40 rounded-full animate-twinkle"
+          style={{
+            top: `${15 + i * 13}%`,
+            left: `${5 + i * 15}%`,
+            animationDelay: `${i * 0.5}s`,
+          }}
+        />
+      ))}
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+        {/* Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-20 relative max-w-5xl mx-auto"
+          transition={{ duration: 0.6 }}
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/70 backdrop-blur-sm border border-amber-200 text-sm font-semibold text-amber-800 mb-8 shadow-lg"
         >
-          <div className="aspect-[16/9] bg-card rounded-3xl border border-border shadow-2xl overflow-hidden flex items-center justify-center relative">
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent"></div>
-            {/* Giả lập mockup điện thoại hiển thị app */}
-            <div className="w-[300px] h-[600px] bg-background rounded-[3rem] border-[8px] border-text shadow-2xl relative overflow-hidden transform translate-y-10">
-              <div className="absolute top-0 w-full h-6 bg-text rounded-b-xl flex justify-center">
-                 <div className="w-1/3 h-4 bg-black rounded-b-xl"></div>
+          <Sparkles size={16} className="text-amber-500" />
+          <span>Trợ lý Thời trang AI #1 Việt Nam</span>
+          <div className="flex items-center gap-0.5 ml-1">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} size={10} className="text-amber-500 fill-amber-500" />
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Headline */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          className="text-6xl md:text-8xl font-black text-stone-800 tracking-tight mb-6 leading-[1.05]"
+        >
+          Tủ Đồ Mơ Ước
+          <br />
+          <span className="bg-gradient-to-r from-amber-600 via-rose-500 to-amber-700 bg-clip-text text-transparent">
+            Trong Tầm Tay
+          </span>
+        </motion.h1>
+
+        {/* Sub headline */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-xl md:text-2xl text-stone-600 mb-12 max-w-2xl mx-auto leading-relaxed font-light"
+        >
+          Số hóa tủ quần áo, phối đồ bằng AI, thử đồ ảo trực tiếp và kết nối cộng đồng thời trang.
+        </motion.p>
+
+        {/* CTA — Store Badges */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          className="flex flex-col sm:flex-row justify-center gap-4 mb-6"
+        >
+          {/* App Store */}
+          <a
+            href="#"
+            className="group inline-flex items-center gap-3 bg-stone-900 hover:bg-stone-800 text-white px-6 py-3.5 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <img src="/appstore.png" alt="" className="h-9 w-9 rounded-lg object-contain flex-shrink-0" />
+            <div className="text-left">
+              <div className="text-[10px] text-stone-400 font-medium uppercase tracking-widest leading-none mb-0.5">Tải về trên</div>
+              <div className="text-lg font-bold leading-tight">App Store</div>
+            </div>
+          </a>
+
+          {/* Google Play */}
+          <a
+            href="#"
+            className="group inline-flex items-center gap-3 bg-stone-900 hover:bg-stone-800 text-white px-6 py-3.5 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <img src="/chplay.png" alt="" className="h-9 w-9 rounded-lg object-contain flex-shrink-0" />
+            <div className="text-left">
+              <div className="text-[10px] text-stone-400 font-medium uppercase tracking-widest leading-none mb-0.5">Tải về trên</div>
+              <div className="text-lg font-bold leading-tight">Google Play</div>
+            </div>
+          </a>
+        </motion.div>
+
+        {/* Social proof */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="flex items-center justify-center gap-6 text-sm text-stone-500 mb-20"
+        >
+          <div className="flex items-center gap-1.5">
+            <Star size={14} className="text-amber-500 fill-amber-500" />
+            <span className="font-semibold text-stone-700">4.9</span>
+            <span>trên App Store</span>
+          </div>
+          <div className="w-px h-4 bg-stone-300" />
+          <span>
+            <span className="font-semibold text-stone-700">50,000+</span> người dùng
+          </span>
+          <div className="w-px h-4 bg-stone-300" />
+          <span>
+            <span className="font-semibold text-stone-700">Miễn phí</span> tải về
+          </span>
+        </motion.div>
+
+        {/* App Mockup */}
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.6 }}
+          className="relative max-w-5xl mx-auto"
+        >
+          <div className="relative bg-white/60 backdrop-blur-xl rounded-[2.5rem] border border-white/80 shadow-[0_30px_100px_-20px_rgba(0,0,0,0.2)] p-8 md:p-12 overflow-hidden">
+            {/* Glow inside card */}
+            <div className="absolute inset-0 bg-gradient-to-br from-amber-50 to-rose-50 opacity-60" />
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-10 md:gap-16">
+              {/* Phone mockup left */}
+              <div className="flex-shrink-0 relative">
+                <div className="w-[200px] h-[400px] bg-stone-900 rounded-[2.5rem] border-[6px] border-stone-800 shadow-2xl overflow-hidden">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-5 bg-stone-900 rounded-b-2xl z-10" />
+                  <div className="h-full bg-gradient-to-br from-amber-50 via-white to-rose-50 p-3 pt-7 flex flex-col gap-2">
+                    <div className="w-full h-24 bg-gradient-to-r from-amber-200 to-rose-200 rounded-2xl flex items-center justify-center text-xs font-bold text-amber-800">AI Lookbook</div>
+                    <div className="flex gap-2 flex-1">
+                      <div className="flex-1 bg-amber-100 rounded-xl" />
+                      <div className="flex-1 bg-rose-100 rounded-xl" />
+                    </div>
+                    <div className="w-full h-8 bg-stone-800 rounded-xl flex items-center justify-center text-white text-[10px] font-bold">Virtual Try-on</div>
+                  </div>
+                </div>
+                {/* Floating card on phone */}
+                <div className="absolute -right-6 top-10 bg-white rounded-2xl shadow-xl px-3 py-2 text-xs font-semibold text-stone-700 border border-stone-100 whitespace-nowrap animate-float">
+                  ✨ AI đề xuất outfit
+                </div>
+                <div className="absolute -left-8 bottom-16 bg-white rounded-2xl shadow-xl px-3 py-2 text-xs font-semibold text-stone-700 border border-stone-100 whitespace-nowrap animate-float-delay">
+                  👗 120 items
+                </div>
               </div>
-              <div className="p-4 pt-12 h-full bg-background flex flex-col gap-4">
-                 {/* App UI mockup */}
-                 <div className="w-full h-32 bg-card rounded-xl border border-border flex items-center justify-center text-text/40">AI Lookbook</div>
-                 <div className="flex gap-2">
-                    <div className="w-1/2 h-40 bg-card rounded-xl border border-border"></div>
-                    <div className="w-1/2 h-40 bg-card rounded-xl border border-border"></div>
-                 </div>
-                 <div className="w-full h-12 bg-primary/20 text-primary font-medium rounded-xl flex items-center justify-center">Virtual Try-on</div>
+
+              {/* Text content right */}
+              <div className="text-left flex-1">
+                <h2 className="text-2xl md:text-3xl font-bold text-stone-800 mb-4">
+                  Trải nghiệm thời trang<br />
+                  <span className="text-amber-600">thế hệ mới</span>
+                </h2>
+                <ul className="space-y-3 text-stone-600">
+                  {[
+                    '🤖 AI tách nền & phân loại trang phục',
+                    '🎨 Canvas mix & match tự do',
+                    '🪞 Virtual Try-on ước đồ ảo',
+                    '👥 Mạng xã hội thời trang',
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-sm md:text-base">
+                      <span className="flex-shrink-0 w-6 h-6 bg-amber-100 rounded-full flex items-center justify-center text-xs">{item.slice(0,2)}</span>
+                      <span>{item.slice(2).trim()}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex gap-4 mt-8">
+                  <a href="#" className="transform hover:-translate-y-1 transition-all duration-300">
+                    <img src="/appstore.png" alt="App Store" className="h-11 w-auto rounded-lg shadow-md hover:shadow-xl" />
+                  </a>
+                  <a href="#" className="transform hover:-translate-y-1 transition-all duration-300">
+                    <img src="/chplay.png" alt="Google Play" className="h-11 w-auto rounded-lg shadow-md hover:shadow-xl" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
+        </motion.div>
+
+        {/* Scroll cue */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+          className="mt-12 flex justify-center"
+        >
+          <a href="#features" className="flex flex-col items-center gap-2 text-stone-400 hover:text-stone-600 transition-colors group">
+            <span className="text-xs font-medium tracking-widest uppercase">Khám phá</span>
+            <ArrowDown size={18} className="animate-bounce" />
+          </a>
         </motion.div>
       </div>
     </section>
