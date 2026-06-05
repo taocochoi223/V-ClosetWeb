@@ -24,7 +24,7 @@ const Navbar = () => {
             <img
               src="/favicon.jpg"
               alt="V-Closet"
-              className="w-9 h-9 rounded-xl object-cover ring-2 ring-amber-200"
+              className="w-9 h-9 rounded-xl object-cover"
             />
             <span className="text-xl font-black text-stone-800 tracking-tighter">
               V-Closet

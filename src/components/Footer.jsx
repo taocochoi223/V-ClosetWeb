@@ -26,11 +26,12 @@ const Footer = () => {
           </p>
 
           {/* Store Badges */}
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 flex-wrap">
             {/* App Store */}
             <a
               href="#"
-              className="group inline-flex items-center gap-3 text-stone-900 px-6 py-3.5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              onClick={(e) => e.preventDefault()}
+              className="group inline-flex items-center gap-3 text-stone-900 px-6 py-3.5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 opacity-50 cursor-not-allowed"
               style={{ backgroundColor: '#FDFBF7' }}
             >
               <img src="/appstore.png" alt="" className="h-9 w-9 rounded-lg object-contain flex-shrink-0" />
@@ -43,13 +44,43 @@ const Footer = () => {
             {/* Google Play */}
             <a
               href="#"
-              className="group inline-flex items-center gap-3 text-stone-900 px-6 py-3.5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              onClick={(e) => e.preventDefault()}
+              className="group inline-flex items-center gap-3 text-stone-900 px-6 py-3.5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 opacity-50 cursor-not-allowed"
               style={{ backgroundColor: '#FDFBF7' }}
             >
               <img src="/chplay.png" alt="" className="h-9 w-9 rounded-lg object-contain flex-shrink-0" />
               <div className="text-left">
                 <div className="text-[10px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải về trên</div>
                 <div className="text-lg font-bold leading-tight" style={{ color: '#3E2723' }}>Google Play</div>
+              </div>
+            </a>
+
+            {/* Tải APK trực tiếp */}
+            <a
+              href="/v-closet.apk"
+              download="v-closet-app.apk"
+              className="group inline-flex items-center gap-3 text-stone-900 px-6 py-3.5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              style={{ backgroundColor: '#FDFBF7' }}
+            >
+              <img src="/android.png" alt="" className="h-9 w-9 rounded-lg object-contain flex-shrink-0" />
+              <div className="text-left">
+                <div className="text-[10px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải trực tiếp</div>
+                <div className="text-lg font-bold leading-tight" style={{ color: '#3E2723' }}>File APK</div>
+              </div>
+            </a>
+
+            {/* APKPure */}
+            <a
+              href="https://apkpure.com/v-closet-tr%E1%BB%A3-l%C3%BD-th%E1%BB%9Di-trang-ai/com.sentinels.vcloset"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-3 text-stone-900 px-6 py-3.5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              style={{ backgroundColor: '#FDFBF7' }}
+            >
+              <img src="/apkpure.png" alt="" className="h-9 w-9 rounded-lg object-contain flex-shrink-0" />
+              <div className="text-left">
+                <div className="text-[10px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải về trên</div>
+                <div className="text-lg font-bold leading-tight" style={{ color: '#3E2723' }}>APKPure</div>
               </div>
             </a>
           </div>
@@ -62,7 +93,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <img src="/favicon.jpg" alt="V-Closet Logo" className="w-9 h-9 rounded-xl object-cover" style={{ boxShadow: '0 0 0 2px #C4B49A' }} />
+              <img src="/favicon.jpg" alt="V-Closet Logo" className="w-9 h-9 rounded-xl object-cover" />
               <span className="text-2xl font-black tracking-tighter" style={{ color: '#3E2723' }}>V-Closet</span>
             </div>
             <p className="mb-6 leading-relaxed text-sm" style={{ color: '#7A6A5F' }}>

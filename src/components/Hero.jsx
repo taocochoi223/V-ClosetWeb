@@ -72,7 +72,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="flex flex-col sm:flex-row justify-center gap-4 mb-6"
+          className="flex flex-col sm:flex-row justify-center gap-4 mb-6 flex-wrap"
         >
           {/* App Store */}
           <a
@@ -89,14 +89,41 @@ const Hero = () => {
 
           {/* Google Play */}
           <a
-            href="/v-closet.apk"
-            download="v-closet-app.apk"
-            className="group inline-flex items-center gap-3 bg-stone-900 hover:bg-stone-800 text-white px-6 py-3.5 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+            href="#"
+            onClick={(e) => e.preventDefault()}
+            className="group inline-flex items-center gap-3 bg-stone-900 hover:bg-stone-800 text-white px-6 py-3.5 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 opacity-50 cursor-not-allowed"
           >
             <img src="/chplay.png" alt="" className="h-9 w-9 rounded-lg object-contain flex-shrink-0" />
             <div className="text-left">
               <div className="text-[10px] text-stone-400 font-medium uppercase tracking-widest leading-none mb-0.5">Tải về trên</div>
               <div className="text-lg font-bold leading-tight">Google Play</div>
+            </div>
+          </a>
+
+          {/* Tải APK trực tiếp */}
+          <a
+            href="/v-closet.apk"
+            download="v-closet-app.apk"
+            className="group inline-flex items-center gap-3 bg-stone-900 hover:bg-stone-800 text-white px-6 py-3.5 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <img src="/android.png" alt="" className="h-9 w-9 rounded-lg object-contain flex-shrink-0" />
+            <div className="text-left">
+              <div className="text-[10px] text-stone-400 font-medium uppercase tracking-widest leading-none mb-0.5">Tải trực tiếp</div>
+              <div className="text-lg font-bold leading-tight">File APK</div>
+            </div>
+          </a>
+
+          {/* APKPure */}
+          <a
+            href="https://apkpure.com/v-closet-tr%E1%BB%A3-l%C3%BD-th%E1%BB%9Di-trang-ai/com.sentinels.vcloset"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 bg-stone-900 hover:bg-stone-800 text-white px-6 py-3.5 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <img src="/apkpure.png" alt="" className="h-9 w-9 rounded-lg object-contain flex-shrink-0" />
+            <div className="text-left">
+              <div className="text-[10px] text-stone-400 font-medium uppercase tracking-widest leading-none mb-0.5">Tải về trên</div>
+              <div className="text-lg font-bold leading-tight">APKPure</div>
             </div>
           </a>
         </motion.div>
@@ -175,12 +202,18 @@ const Hero = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="flex gap-4 mt-8">
+                <div className="flex gap-4 mt-8 flex-wrap">
                   <a href="#" onClick={(e) => e.preventDefault()} className="transform hover:-translate-y-1 transition-all duration-300 opacity-50 cursor-not-allowed">
                     <img src="/appstore.png" alt="App Store" className="h-11 w-auto rounded-lg shadow-md hover:shadow-xl" />
                   </a>
-                  <a href="/v-closet.apk" download="v-closet-app.apk" className="transform hover:-translate-y-1 transition-all duration-300">
+                  <a href="#" onClick={(e) => e.preventDefault()} className="transform hover:-translate-y-1 transition-all duration-300 opacity-50 cursor-not-allowed">
                     <img src="/chplay.png" alt="Google Play" className="h-11 w-auto rounded-lg shadow-md hover:shadow-xl" />
+                  </a>
+                  <a href="/v-closet.apk" download="v-closet-app.apk" className="transform hover:-translate-y-1 transition-all duration-300">
+                    <img src="/android.png" alt="Tải trực tiếp APK" className="h-11 w-auto rounded-lg shadow-md hover:shadow-xl" />
+                  </a>
+                  <a href="https://apkpure.com/v-closet-tr%E1%BB%A3-l%C3%BD-th%E1%BB%9Di-trang-ai/com.sentinels.vcloset" target="_blank" rel="noopener noreferrer" className="transform hover:-translate-y-1 transition-all duration-300">
+                    <img src="/apkpure.png" alt="APKPure" className="h-11 w-auto rounded-lg shadow-md hover:shadow-xl" />
                   </a>
                 </div>
               </div>
