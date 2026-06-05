@@ -72,29 +72,41 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="flex flex-col sm:flex-row justify-center gap-4 mb-6"
+          className="flex flex-wrap justify-center gap-3 mb-6"
         >
           {/* App Store */}
           <a
             href="#"
-            className="group inline-flex items-center gap-3 bg-stone-900 hover:bg-stone-800 text-white px-6 py-3.5 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+            className="group inline-flex items-center gap-3 bg-stone-900 hover:bg-stone-800 text-white px-5 py-3 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
           >
-            <img src="/appstore.png" alt="" className="h-9 w-9 rounded-lg object-contain flex-shrink-0" />
+            <img src="/appstore.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
             <div className="text-left">
-              <div className="text-[10px] text-stone-400 font-medium uppercase tracking-widest leading-none mb-0.5">Tải về trên</div>
-              <div className="text-lg font-bold leading-tight">App Store</div>
+              <div className="text-[9px] text-stone-400 font-medium uppercase tracking-widest leading-none mb-0.5">Tải về trên</div>
+              <div className="text-base font-bold leading-tight">App Store</div>
             </div>
           </a>
 
           {/* Google Play */}
           <a
             href="#"
-            className="group inline-flex items-center gap-3 bg-stone-900 hover:bg-stone-800 text-white px-6 py-3.5 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+            className="group inline-flex items-center gap-3 bg-stone-900 hover:bg-stone-800 text-white px-5 py-3 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
           >
-            <img src="/chplay.png" alt="" className="h-9 w-9 rounded-lg object-contain flex-shrink-0" />
+            <img src="/chplay.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
             <div className="text-left">
-              <div className="text-[10px] text-stone-400 font-medium uppercase tracking-widest leading-none mb-0.5">Tải về trên</div>
-              <div className="text-lg font-bold leading-tight">Google Play</div>
+              <div className="text-[9px] text-stone-400 font-medium uppercase tracking-widest leading-none mb-0.5">Tải về trên</div>
+              <div className="text-base font-bold leading-tight">Google Play</div>
+            </div>
+          </a>
+
+          {/* APK Download */}
+          <a
+            href="#"
+            className="group inline-flex items-center gap-3 bg-stone-900 hover:bg-stone-800 text-white px-5 py-3 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <img src="/apk.webp" alt="" className="h-8 w-8 rounded-lg object-cover flex-shrink-0" />
+            <div className="text-left">
+              <div className="text-[9px] text-stone-400 font-medium uppercase tracking-widest leading-none mb-0.5">Tải file</div>
+              <div className="text-base font-bold leading-tight">Android APK</div>
             </div>
           </a>
         </motion.div>
@@ -121,7 +133,7 @@ const Hero = () => {
           </span>
         </motion.div>
 
-        {/* App Mockup */}
+        {/* App Mockup — real screenshot */}
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
@@ -129,23 +141,27 @@ const Hero = () => {
           className="relative max-w-5xl mx-auto"
         >
           <div className="relative bg-white/60 backdrop-blur-xl rounded-[2.5rem] border border-white/80 shadow-[0_30px_100px_-20px_rgba(0,0,0,0.2)] p-8 md:p-12 overflow-hidden">
-            {/* Glow inside card */}
             <div className="absolute inset-0 bg-gradient-to-br from-amber-50 to-rose-50 opacity-60" />
             <div className="relative z-10 flex flex-col md:flex-row items-center gap-10 md:gap-16">
-              {/* Phone mockup left */}
+
+              {/* Real phone screenshot */}
               <div className="flex-shrink-0 relative">
-                <div className="w-[200px] h-[400px] bg-stone-900 rounded-[2.5rem] border-[6px] border-stone-800 shadow-2xl overflow-hidden">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-5 bg-stone-900 rounded-b-2xl z-10" />
-                  <div className="h-full bg-gradient-to-br from-amber-50 via-white to-rose-50 p-3 pt-7 flex flex-col gap-2">
-                    <div className="w-full h-24 bg-gradient-to-r from-amber-200 to-rose-200 rounded-2xl flex items-center justify-center text-xs font-bold text-amber-800">AI Lookbook</div>
-                    <div className="flex gap-2 flex-1">
-                      <div className="flex-1 bg-amber-100 rounded-xl" />
-                      <div className="flex-1 bg-rose-100 rounded-xl" />
-                    </div>
-                    <div className="w-full h-8 bg-stone-800 rounded-xl flex items-center justify-center text-white text-[10px] font-bold">Virtual Try-on</div>
-                  </div>
+                <div
+                  className="w-[200px] h-[410px] rounded-[2.8rem] overflow-hidden shadow-2xl"
+                  style={{ border: '7px solid #2C1810', backgroundColor: '#1a1a1a' }}
+                >
+                  {/* Notch */}
+                  <div
+                    className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-5 z-10 rounded-b-2xl"
+                    style={{ backgroundColor: '#2C1810' }}
+                  />
+                  <img
+                    src="/app/screen-home.jpg"
+                    alt="V-Closet App"
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
-                {/* Floating card on phone */}
+                {/* Floating labels */}
                 <div className="absolute -right-6 top-10 bg-white rounded-2xl shadow-xl px-3 py-2 text-xs font-semibold text-stone-700 border border-stone-100 whitespace-nowrap animate-float">
                   ✨ AI đề xuất outfit
                 </div>
@@ -164,7 +180,7 @@ const Hero = () => {
                   {[
                     '🤖 AI tách nền & phân loại trang phục',
                     '🎨 Canvas mix & match tự do',
-                    '🪞 Virtual Try-on ước đồ ảo',
+                    '🧑‍🎤 Virtual Try-on ước đồ ảo',
                     '👥 Mạng xã hội thời trang',
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-sm md:text-base">
@@ -173,12 +189,15 @@ const Hero = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="flex gap-4 mt-8">
+                <div className="flex flex-wrap gap-3 mt-8">
                   <a href="#" className="transform hover:-translate-y-1 transition-all duration-300">
-                    <img src="/appstore.png" alt="App Store" className="h-11 w-auto rounded-lg shadow-md hover:shadow-xl" />
+                    <img src="/appstore.png" alt="App Store" className="h-9 w-9 object-cover rounded-lg shadow-md hover:shadow-xl" />
                   </a>
                   <a href="#" className="transform hover:-translate-y-1 transition-all duration-300">
-                    <img src="/chplay.png" alt="Google Play" className="h-11 w-auto rounded-lg shadow-md hover:shadow-xl" />
+                    <img src="/chplay.png" alt="Google Play" className="h-9 w-9 object-cover rounded-lg shadow-md hover:shadow-xl" />
+                  </a>
+                  <a href="#" className="transform hover:-translate-y-1 transition-all duration-300">
+                    <img src="/apk.webp" alt="Tải APK" className="h-9 w-9 object-cover rounded-lg shadow-md hover:shadow-xl" />
                   </a>
                 </div>
               </div>

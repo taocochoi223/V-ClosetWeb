@@ -1,9 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Globe, Share2, Mail, Heart } from 'lucide-react';
 
 const FacebookIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+
+const TikTokIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z" />
   </svg>
 );
 
@@ -22,34 +29,47 @@ const Footer = () => {
             Bắt đầu hành trình thời trang của bạn
           </h2>
           <p className="text-amber-200/70 text-lg mb-10">
-            Tải V-Closet miễn phí — sẵn có trên App Store và Google Play
+            Tải V-Closet miễn phí — sẵn có trên App Store, Google Play và tải thẳng APK
           </p>
 
           {/* Store Badges */}
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             {/* App Store */}
             <a
               href="#"
-              className="group inline-flex items-center gap-3 text-stone-900 px-6 py-3.5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="group inline-flex items-center gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               style={{ backgroundColor: '#FDFBF7' }}
             >
-              <img src="/appstore.png" alt="" className="h-9 w-9 rounded-lg object-contain flex-shrink-0" />
+              <img src="/appstore.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
               <div className="text-left">
-                <div className="text-[10px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải về trên</div>
-                <div className="text-lg font-bold leading-tight" style={{ color: '#3E2723' }}>App Store</div>
+                <div className="text-[9px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải về trên</div>
+                <div className="text-base font-bold leading-tight" style={{ color: '#3E2723' }}>App Store</div>
               </div>
             </a>
 
             {/* Google Play */}
             <a
               href="#"
-              className="group inline-flex items-center gap-3 text-stone-900 px-6 py-3.5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="group inline-flex items-center gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               style={{ backgroundColor: '#FDFBF7' }}
             >
-              <img src="/chplay.png" alt="" className="h-9 w-9 rounded-lg object-contain flex-shrink-0" />
+              <img src="/chplay.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
               <div className="text-left">
-                <div className="text-[10px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải về trên</div>
-                <div className="text-lg font-bold leading-tight" style={{ color: '#3E2723' }}>Google Play</div>
+                <div className="text-[9px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải về trên</div>
+                <div className="text-base font-bold leading-tight" style={{ color: '#3E2723' }}>Google Play</div>
+              </div>
+            </a>
+
+            {/* APK Download */}
+            <a
+              href="#"
+              className="group inline-flex items-center gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              style={{ backgroundColor: '#FDFBF7' }}
+            >
+              <img src="/apk.webp" alt="" className="h-8 w-8 rounded-lg object-cover flex-shrink-0" />
+              <div className="text-left">
+                <div className="text-[9px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải file</div>
+                <div className="text-base font-bold leading-tight" style={{ color: '#3E2723' }}>Android APK</div>
               </div>
             </a>
           </div>
@@ -62,7 +82,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <img src="/favicon.jpg" alt="V-Closet Logo" className="w-9 h-9 rounded-xl object-cover" style={{ boxShadow: '0 0 0 2px #C4B49A' }} />
+              <img src="/favicon.jpg" alt="V-Closet Logo" className="w-9 h-9 rounded-full object-cover" style={{ boxShadow: '0 0 0 2px #C4B49A' }} />
               <span className="text-2xl font-black tracking-tighter" style={{ color: '#3E2723' }}>V-Closet</span>
             </div>
             <p className="mb-6 leading-relaxed text-sm" style={{ color: '#7A6A5F' }}>
@@ -81,6 +101,19 @@ const Footer = () => {
                 onMouseLeave={e => { e.currentTarget.style.backgroundColor = '#DDD8CE'; e.currentTarget.style.color = '#7A6A5F'; }}
               >
                 <FacebookIcon />
+              </a>
+              {/* TikTok */}
+              <a
+                href="https://www.tiktok.com/@vcloset.t.thng.mi"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="TikTok"
+                className="w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5"
+                style={{ backgroundColor: '#DDD8CE', color: '#7A6A5F' }}
+                onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#010101'; e.currentTarget.style.color = '#fff'; }}
+                onMouseLeave={e => { e.currentTarget.style.backgroundColor = '#DDD8CE'; e.currentTarget.style.color = '#7A6A5F'; }}
+              >
+                <TikTokIcon />
               </a>
               {/* Globe */}
               <a
@@ -111,12 +144,24 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-5 text-sm uppercase tracking-wider" style={{ color: '#3E2723' }}>Sản phẩm</h4>
             <ul className="space-y-3">
-              {['Tính năng', 'Cách hoạt động', 'Bảng giá Premium', 'Cập nhật tính năng'].map((item, i) => (
+              {[
+                { label: 'Tính năng', href: '/#features' },
+                { label: 'Cách hoạt động', href: '/#how-it-works' },
+                { label: 'Bảng giá Premium', href: '/#pricing' },
+                { label: 'Cập nhật tính năng', href: '#' }
+              ].map((item, i) => (
                 <li key={i}>
-                  <a href="#" className="text-sm transition-colors hover:underline" style={{ color: '#7A6A5F' }}
-                    onMouseEnter={e => e.currentTarget.style.color = '#4A3B32'}
-                    onMouseLeave={e => e.currentTarget.style.color = '#7A6A5F'}
-                  >{item}</a>
+                  {item.href.startsWith('/') ? (
+                    <a href={item.href} className="text-sm transition-colors hover:underline" style={{ color: '#7A6A5F' }}
+                      onMouseEnter={e => e.currentTarget.style.color = '#4A3B32'}
+                      onMouseLeave={e => e.currentTarget.style.color = '#7A6A5F'}
+                    >{item.label}</a>
+                  ) : (
+                    <a href="javascript:void(0)" className="text-sm transition-colors hover:underline" style={{ color: '#7A6A5F' }}
+                      onMouseEnter={e => e.currentTarget.style.color = '#4A3B32'}
+                      onMouseLeave={e => e.currentTarget.style.color = '#7A6A5F'}
+                    >{item.label}</a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -128,7 +173,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {['Về chúng tôi', 'Tuyển dụng', 'Blog', 'Liên hệ'].map((item, i) => (
                 <li key={i}>
-                  <a href="#" className="text-sm transition-colors" style={{ color: '#7A6A5F' }}
+                  <a href="javascript:void(0)" className="text-sm transition-colors" style={{ color: '#7A6A5F' }}
                     onMouseEnter={e => e.currentTarget.style.color = '#4A3B32'}
                     onMouseLeave={e => e.currentTarget.style.color = '#7A6A5F'}
                   >{item}</a>
@@ -141,12 +186,23 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-5 text-sm uppercase tracking-wider" style={{ color: '#3E2723' }}>Hỗ trợ</h4>
             <ul className="space-y-3">
-              {['Trung tâm trợ giúp', 'Điều khoản dịch vụ', 'Chính sách bảo mật'].map((item, i) => (
+              {[
+                { label: 'Trung tâm trợ giúp', to: '#' },
+                { label: 'Điều khoản dịch vụ', to: '/terms' },
+                { label: 'Chính sách bảo mật', to: '/privacy' }
+              ].map((item, i) => (
                 <li key={i}>
-                  <a href="#" className="text-sm transition-colors" style={{ color: '#7A6A5F' }}
-                    onMouseEnter={e => e.currentTarget.style.color = '#4A3B32'}
-                    onMouseLeave={e => e.currentTarget.style.color = '#7A6A5F'}
-                  >{item}</a>
+                  {item.to.startsWith('/') ? (
+                    <Link to={item.to} className="text-sm transition-colors" style={{ color: '#7A6A5F' }}
+                      onMouseEnter={e => e.currentTarget.style.color = '#4A3B32'}
+                      onMouseLeave={e => e.currentTarget.style.color = '#7A6A5F'}
+                    >{item.label}</Link>
+                  ) : (
+                    <a href="javascript:void(0)" className="text-sm transition-colors" style={{ color: '#7A6A5F' }}
+                      onMouseEnter={e => e.currentTarget.style.color = '#4A3B32'}
+                      onMouseLeave={e => e.currentTarget.style.color = '#7A6A5F'}
+                    >{item.label}</a>
+                  )}
                 </li>
               ))}
               <li className="flex items-center text-sm" style={{ color: '#7A6A5F' }}>
@@ -165,12 +221,14 @@ const Footer = () => {
             in Vietnam.
           </p>
           <div className="flex space-x-6">
-            {['Terms', 'Privacy', 'Cookies'].map((item, i) => (
-              <a key={i} href="#" className="transition-colors" style={{ color: '#9E8A7A' }}
-                onMouseEnter={e => e.currentTarget.style.color = '#4A3B32'}
-                onMouseLeave={e => e.currentTarget.style.color = '#9E8A7A'}
-              >{item}</a>
-            ))}
+            <Link to="/terms" className="transition-colors" style={{ color: '#9E8A7A' }}
+              onMouseEnter={e => e.currentTarget.style.color = '#4A3B32'}
+              onMouseLeave={e => e.currentTarget.style.color = '#9E8A7A'}
+            >Điều khoản</Link>
+            <Link to="/privacy" className="transition-colors" style={{ color: '#9E8A7A' }}
+              onMouseEnter={e => e.currentTarget.style.color = '#4A3B32'}
+              onMouseLeave={e => e.currentTarget.style.color = '#9E8A7A'}
+            >Bảo mật</Link>
           </div>
         </div>
       </div>

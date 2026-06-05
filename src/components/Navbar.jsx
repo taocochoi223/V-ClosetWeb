@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -12,24 +13,25 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled
         ? 'bg-white/90 backdrop-blur-xl shadow-lg shadow-black/5 border-b border-stone-100'
         : 'bg-transparent'
-    }`}>
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex items-center gap-2.5">
-            <img
-              src="/favicon.jpg"
-              alt="V-Closet"
-              className="w-9 h-9 rounded-xl object-cover ring-2 ring-amber-200"
-            />
+          <Link to="/" className="flex items-center gap-2.5">
+            <div className="w-9 h-9 rounded-full overflow-hidden ring-2 ring-amber-200 flex-shrink-0">
+              <img
+                src="/favicon.jpg"
+                alt="V-Closet"
+                className="w-full h-full object-cover scale-[1.6] origin-center"
+              />
+            </div>
             <span className="text-xl font-black text-stone-800 tracking-tighter">
               V-Closet
             </span>
-          </div>
+          </Link>
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center space-x-8">
