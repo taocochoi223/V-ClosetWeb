@@ -50,10 +50,11 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="#"
+              href="/v-closet.apk"
+              download="v-closet-app.apk"
               className="flex items-center gap-2 bg-stone-900 hover:bg-stone-700 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              Tải App Ngay
+              Tải App Ngay (APK)
             </a>
           </div>
 
@@ -88,10 +89,10 @@ const Navbar = () => {
               </a>
             ))}
             <div className="flex gap-3 pt-4 px-2">
-              <a href="#" className="flex-1">
+              <a href="#" onClick={(e) => e.preventDefault()} className="flex-1 opacity-50 cursor-not-allowed">
                 <img src="/appstore.png" alt="App Store" className="h-12 w-full object-contain" />
               </a>
-              <a href="#" className="flex-1">
+              <a href="/v-closet.apk" download="v-closet-app.apk" className="flex-1">
                 <img src="/chplay.png" alt="Google Play" className="h-12 w-full object-contain" />
               </a>
             </div>

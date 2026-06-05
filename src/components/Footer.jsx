@@ -37,7 +37,8 @@ const Footer = () => {
             {/* App Store */}
             <a
               href="#"
-              className="group inline-flex items-center gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              onClick={(e) => e.preventDefault()}
+              className="group inline-flex items-center gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg transition-all duration-300 opacity-50 cursor-not-allowed"
               style={{ backgroundColor: '#FDFBF7' }}
             >
               <img src="/appstore.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
@@ -50,7 +51,8 @@ const Footer = () => {
             {/* Google Play */}
             <a
               href="#"
-              className="group inline-flex items-center gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              onClick={(e) => e.preventDefault()}
+              className="group inline-flex items-center gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg transition-all duration-300 opacity-50 cursor-not-allowed"
               style={{ backgroundColor: '#FDFBF7' }}
             >
               <img src="/chplay.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
@@ -60,16 +62,32 @@ const Footer = () => {
               </div>
             </a>
 
-            {/* APK Download */}
+            {/* Tải APK trực tiếp */}
             <a
-              href="#"
+              href="/v-closet.apk"
+              download="v-closet-app.apk"
               className="group inline-flex items-center gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               style={{ backgroundColor: '#FDFBF7' }}
             >
-              <img src="/apk.webp" alt="" className="h-8 w-8 rounded-lg object-cover flex-shrink-0" />
+              <img src="/android.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
               <div className="text-left">
-                <div className="text-[9px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải file</div>
-                <div className="text-base font-bold leading-tight" style={{ color: '#3E2723' }}>Android APK</div>
+                <div className="text-[9px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải trực tiếp</div>
+                <div className="text-base font-bold leading-tight" style={{ color: '#3E2723' }}>File APK</div>
+              </div>
+            </a>
+
+            {/* APKPure */}
+            <a
+              href="https://apkpure.com/v-closet-tr%E1%BB%A3-l%C3%BD-th%E1%BB%9Di-trang-ai/com.sentinels.vcloset"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              style={{ backgroundColor: '#FDFBF7' }}
+            >
+              <img src="/apkpure.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
+              <div className="text-left">
+                <div className="text-[9px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải về trên</div>
+                <div className="text-base font-bold leading-tight" style={{ color: '#3E2723' }}>APKPure</div>
               </div>
             </a>
           </div>
