@@ -77,7 +77,8 @@ const Hero = () => {
           {/* App Store */}
           <a
             href="#"
-            className="group inline-flex items-center gap-3 bg-stone-900 hover:bg-stone-800 text-white px-6 py-3.5 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+            onClick={(e) => e.preventDefault()}
+            className="group inline-flex items-center gap-3 bg-stone-900 hover:bg-stone-800 text-white px-6 py-3.5 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 opacity-50 cursor-not-allowed"
           >
             <img src="/appstore.png" alt="" className="h-9 w-9 rounded-lg object-contain flex-shrink-0" />
             <div className="text-left">
@@ -88,7 +89,8 @@ const Hero = () => {
 
           {/* Google Play */}
           <a
-            href="#"
+            href="/v-closet.apk"
+            download="v-closet-app.apk"
             className="group inline-flex items-center gap-3 bg-stone-900 hover:bg-stone-800 text-white px-6 py-3.5 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
           >
             <img src="/chplay.png" alt="" className="h-9 w-9 rounded-lg object-contain flex-shrink-0" />
@@ -174,10 +176,10 @@ const Hero = () => {
                   ))}
                 </ul>
                 <div className="flex gap-4 mt-8">
-                  <a href="#" className="transform hover:-translate-y-1 transition-all duration-300">
+                  <a href="#" onClick={(e) => e.preventDefault()} className="transform hover:-translate-y-1 transition-all duration-300 opacity-50 cursor-not-allowed">
                     <img src="/appstore.png" alt="App Store" className="h-11 w-auto rounded-lg shadow-md hover:shadow-xl" />
                   </a>
-                  <a href="#" className="transform hover:-translate-y-1 transition-all duration-300">
+                  <a href="/v-closet.apk" download="v-closet-app.apk" className="transform hover:-translate-y-1 transition-all duration-300">
                     <img src="/chplay.png" alt="Google Play" className="h-11 w-auto rounded-lg shadow-md hover:shadow-xl" />
                   </a>
                 </div>
