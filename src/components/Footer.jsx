@@ -38,7 +38,7 @@ const Footer = () => {
             <a
               href="#"
               onClick={(e) => e.preventDefault()}
-              className="group inline-flex items-center gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg transition-all duration-300 opacity-50 cursor-not-allowed"
+              className="group inline-flex items-center justify-start w-full sm:w-[210px] gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg transition-all duration-300 opacity-50 cursor-not-allowed"
               style={{ backgroundColor: '#FDFBF7' }}
             >
               <img src="/appstore.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
@@ -52,7 +52,7 @@ const Footer = () => {
             <a
               href="#"
               onClick={(e) => e.preventDefault()}
-              className="group inline-flex items-center gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg transition-all duration-300 opacity-50 cursor-not-allowed"
+              className="group inline-flex items-center justify-start w-full sm:w-[210px] gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg transition-all duration-300 opacity-50 cursor-not-allowed"
               style={{ backgroundColor: '#FDFBF7' }}
             >
               <img src="/chplay.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
@@ -66,7 +66,7 @@ const Footer = () => {
             <a
               href="/v-closet.apk"
               download="v-closet-app.apk"
-              className="group inline-flex items-center gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="group inline-flex items-center justify-start w-full sm:w-[210px] gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               style={{ backgroundColor: '#FDFBF7' }}
             >
               <img src="/android.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
@@ -81,7 +81,7 @@ const Footer = () => {
               href="https://apkpure.com/v-closet-tr%E1%BB%A3-l%C3%BD-th%E1%BB%9Di-trang-ai/com.sentinels.vcloset"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="group inline-flex items-center justify-start w-full sm:w-[210px] gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               style={{ backgroundColor: '#FDFBF7' }}
             >
               <img src="/apkpure.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
