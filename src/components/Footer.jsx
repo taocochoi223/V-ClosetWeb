@@ -100,7 +100,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <img src="/favicon.jpg" alt="V-Closet Logo" className="w-9 h-9 rounded-full object-cover" style={{ boxShadow: '0 0 0 2px #C4B49A' }} />
+              <img src="/favicon.png" alt="V-Closet Logo" className="w-9 h-9 rounded-full object-contain" style={{ boxShadow: '0 0 0 2px #C4B49A' }} />
               <span className="text-2xl font-black tracking-tighter" style={{ color: '#3E2723' }}>V-Closet</span>
             </div>
             <p className="mb-6 leading-relaxed text-sm" style={{ color: '#7A6A5F' }}>

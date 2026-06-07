@@ -23,9 +23,9 @@ const Navbar = () => {
           <Link to="/" className="flex items-center gap-2.5">
             <div className="w-9 h-9 rounded-full overflow-hidden ring-2 ring-amber-200 flex-shrink-0">
               <img
-                src="/favicon.jpg"
+                src="/favicon.png"
                 alt="V-Closet"
-                className="w-full h-full object-cover scale-[1.6] origin-center"
+                className="w-full h-full object-contain"
               />
             </div>
             <span className="text-xl font-black text-stone-800 tracking-tighter">
