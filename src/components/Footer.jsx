@@ -122,7 +122,7 @@ const Footer = () => {
               </a>
               {/* TikTok */}
               <a
-                href="https://www.tiktok.com/@vcloset.t.thng.mi"
+                href="https://www.tiktok.com/@vcloset.t.thng.mi?_r=1&_t=ZS-972UK5IkOq0"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="TikTok"
