@@ -9,7 +9,7 @@ const Privacy = () => {
 
   const sections = [
     {
-      title: "Thu thập thông tin",
+      title: "Thông tin thu thập",
       content: (
         <>
           <p className="text-[#5D4A3F] leading-relaxed mb-4">
@@ -17,9 +17,11 @@ const Privacy = () => {
           </p>
           <ul className="space-y-3">
             {[
-              "Thông tin tài khoản: Email, tên người dùng, và ảnh đại diện khi bạn đăng nhập bằng Google hoặc tạo tài khoản mới.",
-              "Dữ liệu hình ảnh: Hình ảnh quần áo, trang phục và người mẫu bạn tải lên để sử dụng tính năng thử đồ AI và quản lý tủ đồ.",
-              "Dữ liệu sử dụng: Lịch sử tương tác, các mục yêu thích và các outfit đã lưu."
+              "Thông tin tài khoản: Email, Họ tên, Tên hiển thị, Mật khẩu (được mã hóa hash), Số điện thoại, Địa chỉ, Ngày sinh, Giới tính, Quốc gia, và Ảnh đại diện khi bạn đăng ký hoặc liên kết tài khoản Google (OAuth 2.0).",
+              "Số đo cơ thể cá nhân: Chiều cao, cân nặng, phong cách sống, màu mắt, kiểu tóc được bạn cung cấp để cá nhân hóa việc phối đồ và gợi ý.",
+              "Dữ liệu hình ảnh: Ảnh quần áo, phụ kiện tải lên tủ đồ cá nhân và ảnh người mẫu (mannequin) dùng cho việc thử đồ AI.",
+              "Dữ liệu mạng xã hội & Tương tác: Lịch sử theo dõi bạn bè, các bài viết chia sẻ outfit lên cộng đồng, số lượt thích (likes), bình luận (comments), báo cáo vi phạm (reports), lịch sử nhắn tin (chat messages) và IP đăng nhập.",
+              "Dữ liệu giao dịch: Lịch sử thanh toán mua gói Premium hoặc mua credit lẻ (gồm mã giao dịch, số tiền, phương thức MoMo/VNPay). Chúng tôi không lưu số thẻ hay thông tin tài khoản ngân hàng của bạn."
             ].map((text, i) => (
               <li key={i} className="flex items-start gap-3 text-[#5D4A3F] leading-relaxed">
                 <CheckCircle2 size={18} className="mt-1 flex-shrink-0 text-amber-600" />
@@ -31,16 +33,18 @@ const Privacy = () => {
       )
     },
     {
-      title: "Sử dụng thông tin",
+      title: "Mục đích sử dụng thông tin",
       content: (
         <>
-          <p className="text-[#5D4A3F] leading-relaxed mb-4">Thông tin của bạn được sử dụng vào các mục đích:</p>
+          <p className="text-[#5D4A3F] leading-relaxed mb-4">Thông tin của bạn được sử dụng vào các mục đích sau:</p>
           <ul className="space-y-3">
             {[
-              "Vận hành các tính năng cốt lõi của V-Closet (phân loại đồ tự động, gợi ý phối đồ AI).",
-              "Đồng bộ tủ đồ trên các thiết bị của bạn.",
-              "Cải thiện độ chính xác của thuật toán AI thời trang.",
-              "Cung cấp hỗ trợ khách hàng và thông báo về các bản cập nhật mới."
+              "Vận hành tính năng cốt lõi (tách nền AI Photoroom, thử đồ AI Fashn, tạo lookbook).",
+              "Cá nhân hóa và đưa ra các gợi ý phối đồ thời trang dựa trên số đo cơ thể và phong cách sống của bạn.",
+              "Đồng bộ tủ đồ ảo của bạn trên các thiết bị đăng nhập.",
+              "Quản lý hạn mức tủ đồ, tính toán số dư credits và lịch sử đăng ký Premium.",
+              "Hỗ trợ các tính năng cộng đồng: bài đăng, lượt like, comment, gửi tin nhắn chat SignalR và gửi thông báo hệ thống.",
+              "Theo dõi lượt click và mua hàng qua sản phẩm tiếp thị liên kết (Affiliate) để thực hiện tính toán hoa hồng với nhãn hàng."
             ].map((text, i) => (
               <li key={i} className="flex items-start gap-3 text-[#5D4A3F] leading-relaxed">
                 <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0" />
@@ -52,47 +56,69 @@ const Privacy = () => {
       )
     },
     {
-      title: "Bảo vệ dữ liệu hình ảnh",
-      content: (
-        <p className="text-[#5D4A3F] leading-relaxed">
-          Chúng tôi hiểu rằng hình ảnh cá nhân là dữ liệu nhạy cảm. Quá trình xử lý ảnh bằng AI (tách nền, thử đồ) được thực hiện qua các kênh mã hóa an toàn. Chúng tôi <strong className="text-[#3E2723]">không</strong> sử dụng hình ảnh cá nhân của bạn để huấn luyện các mô hình AI thương mại khác cho bên thứ ba, và bạn có quyền xóa toàn bộ hình ảnh khỏi máy chủ bất kỳ lúc nào.
-        </p>
-      )
-    },
-    {
-      title: "Chia sẻ thông tin",
-      content: (
-        <p className="text-[#5D4A3F] leading-relaxed">
-          Chúng tôi <strong className="text-[#3E2723]">không bán</strong> dữ liệu cá nhân của bạn cho bên thứ ba. Chúng tôi chỉ chia sẻ dữ liệu với các đối tác cung cấp dịch vụ đám mây (Cloud Providers) nhằm mục đích lưu trữ và xử lý AI, tuân thủ nghiêm ngặt các tiêu chuẩn bảo mật quốc tế.
-        </p>
-      )
-    },
-    {
-      title: "Quyền của người dùng",
-      content: (
-        <>
-          <p className="text-[#5D4A3F] leading-relaxed mb-4">Bạn có toàn quyền:</p>
-          <ul className="space-y-3">
-            {[
-              "Yêu cầu truy xuất bản sao toàn bộ dữ liệu cá nhân.",
-              "Chỉnh sửa hoặc cập nhật thông tin sai lệch.",
-              "Yêu cầu xóa vĩnh viễn tài khoản và toàn bộ dữ liệu (bao gồm cả ảnh) khỏi hệ thống V-Closet."
-            ].map((text, i) => (
-              <li key={i} className="flex items-start gap-3 text-[#5D4A3F] leading-relaxed">
-                <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0" />
-                <span>{text}</span>
-              </li>
-            ))}
-          </ul>
-        </>
-      )
-    },
-    {
-      title: "Liên hệ",
+      title: "Bảo vệ & Xử lý với bên thứ ba",
       content: (
         <div className="space-y-4">
           <p className="text-[#5D4A3F] leading-relaxed">
-            Nếu bạn có bất kỳ câu hỏi nào về Chính Sách Bảo Mật này, vui lòng liên hệ với chúng tôi qua email:
+            Chúng tôi cam kết bảo vệ dữ liệu cá nhân của bạn thông qua các đối tác lưu trữ và API uy tín:
+          </p>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3 text-[#5D4A3F] leading-relaxed">
+              <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0" />
+              <span><strong>Lưu trữ ảnh:</strong> Hình ảnh quần áo và người mẫu được lưu trữ an toàn trên dịch vụ đám mây AWS S3 bằng các kênh truyền tải mã hóa HTTPS.</span>
+            </li>
+            <li className="flex items-start gap-3 text-[#5D4A3F] leading-relaxed">
+              <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0" />
+              <span><strong>API xử lý AI của bên thứ ba:</strong> Ảnh của bạn được gửi tạm thời thông qua kết nối bảo mật đến API Photoroom (tách nền) và Fashn AI (thử đồ ảo) để xử lý. Các dịch vụ này cam kết không giữ lại ảnh của bạn cho các mô hình AI thương mại khác.</span>
+            </li>
+            <li className="flex items-start gap-3 text-[#5D4A3F] leading-relaxed">
+              <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0" />
+              <span><strong>Xử lý Thanh toán:</strong> Giao dịch được xử lý hoàn toàn qua hệ thống của MoMo hoặc VNPay. V-Closet chỉ ghi nhận kết quả trạng thái thanh toán từ các cổng này để cập nhật dịch vụ.</span>
+            </li>
+            <li className="flex items-start gap-3 text-[#5D4A3F] leading-relaxed">
+              <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0" />
+              <span><strong>Cam kết không bán dữ liệu:</strong> Chúng tôi <strong className="text-[#3E2723]">không bán</strong> thông tin cá nhân hay hình ảnh thời trang của bạn cho bất kỳ bên thứ ba nào.</span>
+            </li>
+          </ul>
+        </div>
+      )
+    },
+    {
+      title: "Quyền của người dùng & Xóa vĩnh viễn dữ liệu",
+      content: (
+        <>
+          <p className="text-[#5D4A3F] leading-relaxed mb-4">Bạn có toàn bộ các quyền sau đối với dữ liệu của mình:</p>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3 text-[#5D4A3F] leading-relaxed">
+              <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0" />
+              <span>Yêu cầu truy xuất bản sao thông tin cá nhân của bạn.</span>
+            </li>
+            <li className="flex items-start gap-3 text-[#5D4A3F] leading-relaxed">
+              <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0" />
+              <span>Chỉnh sửa thông tin hồ sơ và số đo cơ thể bất kỳ lúc nào thông qua phần Cài đặt Hồ sơ.</span>
+            </li>
+            <li className="flex items-start gap-3 text-[#5D4A3F] leading-relaxed">
+              <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0" />
+              <span><strong>Quyền xóa tài khoản vĩnh viễn (Deactivation):</strong> Bạn có quyền tự xóa tài khoản vĩnh viễn ngay trong ứng dụng di động. Khi bạn thực hiện, hệ thống sẽ xóa sạch toàn bộ hồ sơ người dùng, thông tin liên lạc, lịch sử giao dịch và hình ảnh đã tải lên khỏi cơ sở dữ liệu hoạt động và cloud storage AWS S3 của chúng tôi.</span>
+            </li>
+          </ul>
+        </>
+      )
+    },
+    {
+      title: "Bảo mật dữ liệu & Cơ chế lưu trữ",
+      content: (
+        <p className="text-[#5D4A3F] leading-relaxed">
+          Chúng tôi áp dụng các biện pháp kỹ thuật tiêu chuẩn quốc tế bao gồm mã hóa SSL/TLS cho dữ liệu truyền tải, phân quyền truy cập máy chủ nghiêm ngặt, mã hóa mật khẩu một chiều (Hash) để ngăn chặn truy cập trái phép. Refresh Token và Access Token đăng nhập được lưu trữ an toàn và có cơ chế tự thu hồi khi bạn chọn Đăng xuất (Logout).
+        </p>
+      )
+    },
+    {
+      title: "Thông tin liên hệ",
+      content: (
+        <div className="space-y-4">
+          <p className="text-[#5D4A3F] leading-relaxed">
+            Nếu bạn có bất kỳ câu hỏi nào về Chính Sách Bảo Mật này, hoặc muốn thực hiện quyền xóa dữ liệu của mình qua email, vui lòng liên hệ với chúng tôi qua email:
           </p>
           <div className="bg-[#FDFBF7] p-4 rounded-xl border border-[#EAE3D9] flex items-center justify-between">
             <span className="text-[#5D4A3F]">Email Trung tâm Hỗ trợ Bảo mật:</span>
@@ -131,8 +157,8 @@ const Privacy = () => {
             </h1>
           </div>
           <div className="md:text-right">
-            <p className="text-sm font-semibold uppercase tracking-wider text-amber-600 mb-1">Cập nhật lần cuối</p>
-            <p className="text-lg text-[#5D4A3F]">Ngày 05 tháng 06, 2026</p>
+            <p class="text-sm font-semibold uppercase tracking-wider text-amber-600 mb-1">Cập nhật lần cuối</p>
+            <p className="text-lg text-[#5D4A3F]">Ngày 08 tháng 06, 2026</p>
           </div>
         </div>
 
