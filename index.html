@@ -36,9 +36,27 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "V-Closet",
-      "url": "https://vcloset.vn/"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "V-Closet",
+          "url": "https://vcloset.vn/"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "V-Closet",
+          "applicationCategory": "LifestyleApplication",
+          "operatingSystem": "iOS, Android",
+          "description": "V-Closet là ứng dụng Trợ lý thời trang AI giúp người dùng số hóa tủ quần áo, phối đồ thông minh, và thử đồ ảo (Virtual Try-on). Không phải cửa hàng bán quần áo.",
+          "url": "https://vcloset.vn/",
+          "image": "https://vcloset.vn/favicon.png",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "VND"
+          }
+        }
+      ]
     }
   </script>
 </head>
