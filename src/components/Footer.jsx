@@ -66,6 +66,7 @@ const Footer = () => {
             <a
               href="/v-closet.apk"
               download="v-closet-app.apk"
+              onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'footer_direct' })}
               className="group inline-flex items-center justify-start w-full sm:w-[210px] gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               style={{ backgroundColor: '#FDFBF7' }}
             >
@@ -81,6 +82,7 @@ const Footer = () => {
               href="https://apkpure.com/v-closet-tr%E1%BB%A3-l%C3%BD-th%E1%BB%9Di-trang-ai/com.sentinels.vcloset"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'footer_apkpure' })}
               className="group inline-flex items-center justify-start w-full sm:w-[210px] gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               style={{ backgroundColor: '#FDFBF7' }}
             >
