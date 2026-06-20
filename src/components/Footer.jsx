@@ -29,7 +29,7 @@ const Footer = () => {
             Bắt đầu hành trình thời trang của bạn
           </h2>
           <p className="text-amber-200/70 text-lg mb-10">
-            Tải V-Closet miễn phí — sẵn có trên App Store, Google Play và tải thẳng APK
+            Tải V-Closet miễn phí — sẵn có trên APKPure
           </p>
 
           {/* Store Badges */}
@@ -59,21 +59,6 @@ const Footer = () => {
               <div className="text-left">
                 <div className="text-[9px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải về trên</div>
                 <div className="text-base font-bold leading-tight" style={{ color: '#3E2723' }}>Google Play</div>
-              </div>
-            </a>
-
-            {/* Tải APK trực tiếp */}
-            <a
-              href="/v-closet.apk"
-              download="v-closet-app.apk"
-              onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'footer_direct' })}
-              className="group inline-flex items-center justify-start w-full sm:w-[210px] gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              style={{ backgroundColor: '#FDFBF7' }}
-            >
-              <img src="/android.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
-              <div className="text-left">
-                <div className="text-[9px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải trực tiếp</div>
-                <div className="text-base font-bold leading-tight" style={{ color: '#3E2723' }}>File APK</div>
               </div>
             </a>
 

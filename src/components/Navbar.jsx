@@ -50,12 +50,13 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="/v-closet.apk"
-              download="v-closet-app.apk"
-              onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'navbar_direct' })}
+              href="https://apkpure.com/v-closet-tr%E1%BB%A3-l%C3%BD-th%E1%BB%9Di-trang-ai/com.sentinels.vcloset"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'navbar_apkpure' })}
               className="flex items-center gap-2 bg-stone-900 hover:bg-stone-700 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              Tải App Ngay (APK)
+              Tải App Ngay (APKPure)
             </a>
           </div>
 
@@ -93,8 +94,8 @@ const Navbar = () => {
               <a href="#" onClick={(e) => e.preventDefault()} className="flex-1 opacity-50 cursor-not-allowed">
                 <img src="/appstore.png" alt="App Store" className="h-12 w-full object-contain" />
               </a>
-              <a href="/v-closet.apk" download="v-closet-app.apk" className="flex-1" onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'navbar_mobile_direct' })}>
-                <img src="/chplay.png" alt="Google Play" className="h-12 w-full object-contain" />
+              <a href="https://apkpure.com/v-closet-tr%E1%BB%A3-l%C3%BD-th%E1%BB%9Di-trang-ai/com.sentinels.vcloset" target="_blank" rel="noopener noreferrer" className="flex-1" onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'navbar_mobile_apkpure' })}>
+                <img src="/apkpure.png" alt="APKPure" className="h-12 w-full object-contain rounded-lg" style={{ height: '48px', objectFit: 'contain' }} />
               </a>
             </div>
           </div>
