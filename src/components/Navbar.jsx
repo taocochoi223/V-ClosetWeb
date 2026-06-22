@@ -89,14 +89,20 @@ const Navbar = () => {
                 {item.label}
               </a>
             ))}
-            <div className="flex gap-3 pt-4 px-2">
-              <a href="#" onClick={(e) => e.preventDefault()} className="flex-1 opacity-50 cursor-not-allowed">
-                <img src="/appstore.png" alt="App Store" className="h-12 w-full object-contain" />
+            <div className="grid grid-cols-2 gap-3 pt-4 px-2">
+              <a href="#" onClick={(e) => e.preventDefault()} className="opacity-50 cursor-not-allowed flex items-center justify-center bg-stone-100 rounded-lg p-2" style={{ height: '48px' }}>
+                <img src="/appstore.png" alt="App Store" className="h-9 w-full object-contain" />
+              </a>
+              <a href="#" onClick={(e) => e.preventDefault()} className="opacity-50 cursor-not-allowed flex items-center justify-center bg-stone-100 rounded-lg p-2" style={{ height: '48px' }}>
+                <img src="/chplay.png" alt="Google Play" className="h-9 w-full object-contain" />
+              </a>
+              <a href="#" onClick={(e) => e.preventDefault()} className="opacity-50 cursor-not-allowed flex items-center justify-center bg-stone-100 rounded-lg p-2" style={{ height: '48px' }}>
+                <img src="/apkpure.png" alt="APKPure" className="h-9 w-full object-contain rounded-lg" style={{ objectFit: 'contain' }} />
               </a>
               <a
                 href="/vcloset.apk"
                 download
-                className="flex-1 flex items-center justify-center gap-2 bg-stone-950 text-white rounded-lg px-2 text-xs font-bold"
+                className="flex items-center justify-center gap-2 bg-stone-950 text-white rounded-lg px-2 text-xs font-bold"
                 style={{ height: '48px' }}
                 onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'navbar_mobile_direct_apk' })}
               >

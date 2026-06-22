@@ -62,6 +62,20 @@ const Footer = () => {
               </div>
             </a>
 
+            {/* APKPure */}
+            <a
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              className="group inline-flex items-center justify-start w-full sm:w-[210px] gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg transition-all duration-300 opacity-50 cursor-not-allowed"
+              style={{ backgroundColor: '#FDFBF7' }}
+            >
+              <img src="/apkpure.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
+              <div className="text-left">
+                <div className="text-[9px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải về trên</div>
+                <div className="text-base font-bold leading-tight" style={{ color: '#3E2723' }}>APKPure</div>
+              </div>
+            </a>
+
             {/* APK Direct */}
             <a
               href="/vcloset.apk"
