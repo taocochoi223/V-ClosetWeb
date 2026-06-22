@@ -29,7 +29,7 @@ const Footer = () => {
             Bắt đầu hành trình thời trang của bạn
           </h2>
           <p className="text-amber-200/70 text-lg mb-10">
-            Tải V-Closet miễn phí — sẵn có trên APKPure
+            Tải V-Closet miễn phí — hỗ trợ tải file APK trực tiếp
           </p>
 
           {/* Store Badges */}
@@ -62,19 +62,18 @@ const Footer = () => {
               </div>
             </a>
 
-            {/* APKPure */}
+            {/* APK Direct */}
             <a
-              href="https://apkpure.com/v-closet-tr%E1%BB%A3-l%C3%BD-th%E1%BB%9Di-trang-ai/com.sentinels.vcloset"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'footer_apkpure' })}
+              href="/vcloset.apk"
+              download
+              onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'footer_direct_apk' })}
               className="group inline-flex items-center justify-start w-full sm:w-[210px] gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               style={{ backgroundColor: '#FDFBF7' }}
             >
-              <img src="/apkpure.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
+              <img src="/android.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
               <div className="text-left">
-                <div className="text-[9px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải về trên</div>
-                <div className="text-base font-bold leading-tight" style={{ color: '#3E2723' }}>APKPure</div>
+                <div className="text-[9px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải về trực tiếp</div>
+                <div className="text-base font-bold leading-tight" style={{ color: '#3E2723' }}>Bản APK</div>
               </div>
             </a>
           </div>
