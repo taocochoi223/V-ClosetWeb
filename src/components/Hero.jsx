@@ -89,9 +89,11 @@ const Hero = () => {
 
           {/* Google Play */}
           <a
-            href="#"
-            onClick={(e) => e.preventDefault()}
-            className="group inline-flex items-center justify-start w-full sm:w-[210px] gap-3 bg-stone-900 text-white px-5 py-3 rounded-2xl shadow-xl transition-all duration-300 opacity-50 cursor-not-allowed"
+            href="https://play.google.com/store/apps/details?id=com.sentinels.vcloset"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'click_googleplay', { method: 'hero' })}
+            className="group inline-flex items-center justify-start w-full sm:w-[210px] gap-3 bg-stone-900 hover:bg-stone-800 text-white px-5 py-3 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
           >
             <img src="/chplay.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
             <div className="text-left">
@@ -110,20 +112,6 @@ const Hero = () => {
             <div className="text-left">
               <div className="text-[9px] text-stone-400 font-medium uppercase tracking-widest leading-none mb-0.5">Tải về trên</div>
               <div className="text-base font-bold leading-tight">APKPure</div>
-            </div>
-          </a>
-
-          {/* APK Direct */}
-          <a
-            href="/vcloset.apk"
-            download
-            onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'hero_direct_apk' })}
-            className="group inline-flex items-center justify-start w-full sm:w-[210px] gap-3 bg-stone-900 hover:bg-stone-800 text-white px-5 py-3 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
-          >
-            <img src="/android.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
-            <div className="text-left">
-              <div className="text-[9px] text-stone-400 font-medium uppercase tracking-widest leading-none mb-0.5">Tải về trực tiếp</div>
-              <div className="text-base font-bold leading-tight">Bản APK</div>
             </div>
           </a>
         </motion.div>
@@ -210,14 +198,18 @@ const Hero = () => {
                   <a href="#" onClick={(e) => e.preventDefault()} className="transform hover:-translate-y-1 transition-all duration-300 opacity-50 cursor-not-allowed" title="App Store (Sắp ra mắt)">
                     <img src="/appstore.png" alt="App Store" className="h-9 w-9 object-contain rounded-lg shadow-md hover:shadow-xl" />
                   </a>
-                  <a href="#" onClick={(e) => e.preventDefault()} className="transform hover:-translate-y-1 transition-all duration-300 opacity-50 cursor-not-allowed" title="Google Play (Sắp ra mắt)">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.sentinels.vcloset"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'click_googleplay', { method: 'hero_mockup' })}
+                    className="transform hover:-translate-y-1 transition-all duration-300"
+                    title="Google Play"
+                  >
                     <img src="/chplay.png" alt="Google Play" className="h-9 w-9 object-contain rounded-lg shadow-md hover:shadow-xl" />
                   </a>
                   <a href="#" onClick={(e) => e.preventDefault()} className="transform hover:-translate-y-1 transition-all duration-300 opacity-50 cursor-not-allowed" title="APKPure (Tạm thời gián đoạn)">
                     <img src="/apkpure.png" alt="APKPure" className="h-9 w-9 object-contain rounded-lg shadow-md hover:shadow-xl" />
-                  </a>
-                  <a href="/vcloset.apk" download className="transform hover:-translate-y-1 transition-all duration-300" onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'hero_small_direct_apk' })} title="Tải APK trực tiếp">
-                    <img src="/android.png" alt="Tải APK" className="h-9 w-9 object-contain rounded-lg shadow-md hover:shadow-xl" />
                   </a>
                 </div>
               </div>

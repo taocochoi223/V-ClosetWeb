@@ -50,12 +50,13 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="/vcloset.apk"
-              download
-              onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'navbar_direct_apk' })}
+              href="https://play.google.com/store/apps/details?id=com.sentinels.vcloset"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'click_googleplay', { method: 'navbar' })}
               className="flex items-center gap-2 bg-stone-900 hover:bg-stone-700 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              Tải APK Trực tiếp
+              Tải trên Google Play
             </a>
           </div>
 
@@ -93,21 +94,18 @@ const Navbar = () => {
               <a href="#" onClick={(e) => e.preventDefault()} className="opacity-50 cursor-not-allowed flex items-center justify-center bg-stone-100 rounded-lg p-2" style={{ height: '48px' }}>
                 <img src="/appstore.png" alt="App Store" className="h-9 w-full object-contain" />
               </a>
-              <a href="#" onClick={(e) => e.preventDefault()} className="opacity-50 cursor-not-allowed flex items-center justify-center bg-stone-100 rounded-lg p-2" style={{ height: '48px' }}>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.sentinels.vcloset"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'click_googleplay', { method: 'navbar_mobile' })}
+                className="flex items-center justify-center bg-stone-100 hover:bg-stone-200 rounded-lg p-2 transition-colors"
+                style={{ height: '48px' }}
+              >
                 <img src="/chplay.png" alt="Google Play" className="h-9 w-full object-contain" />
               </a>
-              <a href="#" onClick={(e) => e.preventDefault()} className="opacity-50 cursor-not-allowed flex items-center justify-center bg-stone-100 rounded-lg p-2" style={{ height: '48px' }}>
+              <a href="#" onClick={(e) => e.preventDefault()} className="opacity-50 cursor-not-allowed flex items-center justify-center bg-stone-100 rounded-lg p-2 col-span-2" style={{ height: '48px' }}>
                 <img src="/apkpure.png" alt="APKPure" className="h-9 w-full object-contain rounded-lg" style={{ objectFit: 'contain' }} />
-              </a>
-              <a
-                href="/vcloset.apk"
-                download
-                className="flex items-center justify-center gap-2 bg-stone-950 text-white rounded-lg px-2 text-xs font-bold"
-                style={{ height: '48px' }}
-                onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'navbar_mobile_direct_apk' })}
-              >
-                <img src="/android.png" alt="" className="h-5 w-5 object-contain" />
-                <span>Tải APK</span>
               </a>
             </div>
           </div>
