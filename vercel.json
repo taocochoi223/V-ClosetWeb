@@ -14,7 +14,7 @@
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!app-ads\\.txt|robots\\.txt|sitemap\\.xml|.*\\.html|.*\\.apk|.*\\.png|.*\\.webp|.*\\.ico|.*\\.jpg|.*\\.svg).*)",
       "destination": "/index.html"
     }
   ]
