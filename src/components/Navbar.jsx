@@ -50,12 +50,13 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="/v-closet.apk"
-              download="v-closet-app.apk"
-              onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'navbar_direct' })}
+              href="https://play.google.com/store/apps/details?id=com.sentinels.vcloset"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_app', { method: 'navbar_desktop_googleplay' })}
               className="flex items-center gap-2 bg-stone-900 hover:bg-stone-700 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              Tải App Ngay (APK)
+              Tải App Ngay
             </a>
           </div>
 
@@ -93,7 +94,7 @@ const Navbar = () => {
               <a href="#" onClick={(e) => e.preventDefault()} className="flex-1 opacity-50 cursor-not-allowed">
                 <img src="/appstore.png" alt="App Store" className="h-12 w-full object-contain" />
               </a>
-              <a href="/v-closet.apk" download="v-closet-app.apk" className="flex-1" onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'navbar_mobile_direct' })}>
+              <a href="https://play.google.com/store/apps/details?id=com.sentinels.vcloset" target="_blank" rel="noopener noreferrer" className="flex-1" onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'navbar_mobile_googleplay' })}>
                 <img src="/chplay.png" alt="Google Play" className="h-12 w-full object-contain" />
               </a>
             </div>

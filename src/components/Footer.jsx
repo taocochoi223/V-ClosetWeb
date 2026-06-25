@@ -19,17 +19,17 @@ const Footer = () => {
     <footer className="relative overflow-hidden" style={{ backgroundColor: '#EDE8DF' }}>
 
       {/* Download CTA Banner */}
-      <div className="relative py-16 px-4 overflow-hidden" style={{ backgroundColor: '#3E2723' }}>
+      <div className="relative py-16 px-4 overflow-hidden border-b border-amber-200/30" style={{ background: 'linear-gradient(135deg, #fdf8f0 0%, #fef3e2 30%, #fff1f2 60%, #fdf8f0 100%)' }}>
         {/* Subtle warm glow */}
-        <div className="absolute top-0 left-1/4 w-80 h-80 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(161,110,83,0.15)' }} />
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(161,110,83,0.1)' }} />
+        <div className="absolute top-0 left-1/4 w-80 h-80 rounded-full blur-3xl bg-amber-200/40" />
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 rounded-full blur-3xl bg-rose-200/30" />
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-3">
+          <h2 className="text-3xl md:text-4xl font-black text-stone-800 mb-3">
             Bắt đầu hành trình thời trang của bạn
           </h2>
-          <p className="text-amber-200/70 text-lg mb-10">
-            Tải V-Closet miễn phí — sẵn có trên App Store, Google Play và tải thẳng APK
+          <p className="text-stone-600 text-lg mb-10">
+            Tải V-Closet miễn phí — sẵn có trên App Store và Google Play
           </p>
 
           {/* Store Badges */}
@@ -38,58 +38,27 @@ const Footer = () => {
             <a
               href="#"
               onClick={(e) => e.preventDefault()}
-              className="group inline-flex items-center justify-start w-full sm:w-[210px] gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg transition-all duration-300 opacity-50 cursor-not-allowed"
-              style={{ backgroundColor: '#FDFBF7' }}
+              className="group inline-flex items-center justify-start w-full sm:w-[210px] gap-3 bg-stone-900 text-white px-5 py-3 rounded-2xl shadow-xl transition-all duration-300 opacity-50 cursor-not-allowed"
             >
               <img src="/appstore.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
               <div className="text-left">
-                <div className="text-[9px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải về trên</div>
-                <div className="text-base font-bold leading-tight" style={{ color: '#3E2723' }}>App Store</div>
+                <div className="text-[9px] text-stone-400 font-medium uppercase tracking-widest leading-none mb-0.5">Tải về trên</div>
+                <div className="text-base font-bold leading-tight">App Store</div>
               </div>
             </a>
 
             {/* Google Play */}
             <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              className="group inline-flex items-center justify-start w-full sm:w-[210px] gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg transition-all duration-300 opacity-50 cursor-not-allowed"
-              style={{ backgroundColor: '#FDFBF7' }}
+              href="https://play.google.com/store/apps/details?id=com.sentinels.vcloset"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'footer_googleplay' })}
+              className="group inline-flex items-center justify-start w-full sm:w-[210px] gap-3 bg-stone-900 hover:bg-stone-800 text-white px-5 py-3 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
             >
               <img src="/chplay.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
               <div className="text-left">
-                <div className="text-[9px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải về trên</div>
-                <div className="text-base font-bold leading-tight" style={{ color: '#3E2723' }}>Google Play</div>
-              </div>
-            </a>
-
-            {/* Tải APK trực tiếp */}
-            <a
-              href="/v-closet.apk"
-              download="v-closet-app.apk"
-              onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'footer_direct' })}
-              className="group inline-flex items-center justify-start w-full sm:w-[210px] gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              style={{ backgroundColor: '#FDFBF7' }}
-            >
-              <img src="/android.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
-              <div className="text-left">
-                <div className="text-[9px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải trực tiếp</div>
-                <div className="text-base font-bold leading-tight" style={{ color: '#3E2723' }}>File APK</div>
-              </div>
-            </a>
-
-            {/* APKPure */}
-            <a
-              href="https://apkpure.com/v-closet-tr%E1%BB%A3-l%C3%BD-th%E1%BB%9Di-trang-ai/com.sentinels.vcloset"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'footer_apkpure' })}
-              className="group inline-flex items-center justify-start w-full sm:w-[210px] gap-3 text-stone-900 px-5 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              style={{ backgroundColor: '#FDFBF7' }}
-            >
-              <img src="/apkpure.png" alt="" className="h-8 w-8 rounded-lg object-contain flex-shrink-0" />
-              <div className="text-left">
-                <div className="text-[9px] font-medium uppercase tracking-widest leading-none mb-0.5" style={{ color: '#9E8A7A' }}>Tải về trên</div>
-                <div className="text-base font-bold leading-tight" style={{ color: '#3E2723' }}>APKPure</div>
+                <div className="text-[9px] text-stone-400 font-medium uppercase tracking-widest leading-none mb-0.5">Tải về trên</div>
+                <div className="text-base font-bold leading-tight">Google Play</div>
               </div>
             </a>
           </div>
