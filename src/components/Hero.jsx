@@ -90,6 +90,7 @@ const Hero = () => {
               <div className="text-base font-bold leading-tight">Google Play</div>
             </div>
           </a>
+
         </motion.div>
 
         {/* Social proof */}
@@ -171,7 +172,7 @@ const Hero = () => {
                   ))}
                 </ul>
                 <div className="flex flex-wrap gap-3 mt-8">
-                  <a href="#" onClick={(e) => e.preventDefault()} className="transform hover:-translate-y-1 transition-all duration-300 opacity-50 cursor-not-allowed">
+                  <a href="#" onClick={(e) => e.preventDefault()} className="transform hover:-translate-y-1 transition-all duration-300 opacity-50 cursor-not-allowed" title="App Store (Sắp ra mắt)">
                     <img src="/appstore.png" alt="App Store" className="h-9 w-9 object-contain rounded-lg shadow-md hover:shadow-xl" />
                   </a>
                   <a href="https://play.google.com/store/apps/details?id=com.sentinels.vcloset" target="_blank" rel="noopener noreferrer" className="transform hover:-translate-y-1 transition-all duration-300" onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'hero_small_googleplay' })}>

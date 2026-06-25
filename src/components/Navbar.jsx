@@ -90,9 +90,9 @@ const Navbar = () => {
                 {item.label}
               </a>
             ))}
-            <div className="flex gap-3 pt-4 px-2">
-              <a href="#" onClick={(e) => e.preventDefault()} className="flex-1 opacity-50 cursor-not-allowed">
-                <img src="/appstore.png" alt="App Store" className="h-12 w-full object-contain" />
+            <div className="grid grid-cols-2 gap-3 pt-4 px-2">
+              <a href="#" onClick={(e) => e.preventDefault()} className="opacity-50 cursor-not-allowed flex items-center justify-center bg-stone-100 rounded-lg p-2" style={{ height: '48px' }}>
+                <img src="/appstore.png" alt="App Store" className="h-9 w-full object-contain" />
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.sentinels.vcloset" target="_blank" rel="noopener noreferrer" className="flex-1" onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'download_apk', { method: 'navbar_mobile_googleplay' })}>
                 <img src="/chplay.png" alt="Google Play" className="h-12 w-full object-contain" />
